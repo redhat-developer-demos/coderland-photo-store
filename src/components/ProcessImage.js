@@ -60,7 +60,7 @@ class ProcessImage extends React.Component {
       body: JSON.stringify({
         imageData: base64result,
         imageType: 'jpg',
-        greeting: 'Hello from CoderLand!',
+        greeting: 'Hello from Coderland!',
         dateFormatString: 'MMMM d, yyyy',
         language: 'en',
         location: 'US'
