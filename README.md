@@ -9,6 +9,10 @@ coderland-overlay-image is the service that is used with this application. It is
 There are options for running this program:
 
 1. Run it from the command line
+    * npm install
+    * npm starr
 2. Run it in a Linux container
+    * docker build -t coderland .
+    * docker run -p 3000:3000 coderland
 3. Run it in OpenShift
 
