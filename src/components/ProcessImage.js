@@ -51,27 +51,32 @@ class ProcessImage extends React.Component {
     // Set up URI
     const url = process.env.REACT_APP_OVERLAY_URL
 
-    fetch(url, {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        imageData: base64result,
-        imageType: 'jpg',
-        greeting: 'Hello from Coderland!',
-        dateFormatString: 'MMMM d, yyyy',
-        language: 'en',
-        location: 'US'
-      }),
-    })
-      .then(response => response.json())
-      .then((responseJson) => {
-        this.setState({
-          imgsrc: "data:image/jpeg;base64," + responseJson.imageData
-        })
+    try {
+      fetch(url, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          imageData: base64result,
+          imageType: 'jpg',
+          greeting: 'Hello from Coderland!',
+          dateFormatString: 'MMMM d, yyyy',
+          language: 'en',
+          location: 'US'
+        }),
       })
+        .then(response => response.json())
+        .then((responseJson) => {
+          this.setState({
+            imgsrc: "data:image/jpeg;base64," + responseJson.imageData
+          })
+        })
+      }
+    catch (error) {
+        return(error)
+    }
   }
 }
 
