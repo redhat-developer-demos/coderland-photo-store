@@ -6,6 +6,12 @@ To run this demo, you'll need to point it to a service that accepts a JPEG pictu
 
 coderland-overlay-image is the service that is used with this application. It is run as an OpenWhisk Web Action in OpenShift.
 
+## ENVIRONMENT VARIABLE  
+You must set the REACT_APP_OVERLAY_URL environment variable to point to the service that does the image overlay.  
+
+e.g. `export REACT_APP_OVERLAY_URL=service.foo.bar.com`
+
+
 There are options for running this program:
 
 1. Run it from the command line

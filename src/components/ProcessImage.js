@@ -49,7 +49,7 @@ class ProcessImage extends React.Component {
     var base64result = original.split(',')[1];
 
     // Set up URI
-    const url = 'http://localhost:8080/overlayImage'
+    const url = process.env.REACT_APP_OVERLAY_URL
 
     fetch(url, {
       method: 'post',
