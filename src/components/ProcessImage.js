@@ -1,5 +1,5 @@
-import React from "react";
-import Webcam from "react-webcam";
+import React from "react"
+import Webcam from "react-webcam"
 
 class ProcessImage extends React.Component {
 
@@ -53,8 +53,11 @@ class ProcessImage extends React.Component {
     //const url = "http://localhost:8080/overlayImage"
 
     try {
-      fetch(url, {
-        method: 'post',
+      const nodefetch = require('node-fetch')
+//      fetch(url, {
+        nodefetch(url, {
+          timeout: 10000,
+          method: 'post',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
