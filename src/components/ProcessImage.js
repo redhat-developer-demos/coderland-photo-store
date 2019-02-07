@@ -64,7 +64,7 @@ class ProcessImage extends React.Component {
         body: JSON.stringify({
           imageData: base64result,
           imageType: 'jpg',
-          greeting: 'The Compile Driver!',
+          greeting: process.env.REACT_APP_OVERLAY_MESSAGE,
           dateFormatString: 'MMMM d, yyyy',
           language: 'en',
           location: 'US'
