@@ -17,6 +17,7 @@ class ProcessImage extends React.Component {
   };
 
   capture = () => {
+    document.getElementById("pictureButton").disabled=true;
     this.setState({
       imgsrc: this.getOverlay(this.webcam.getScreenshot()),
       resultsHidden: false
@@ -25,8 +26,6 @@ class ProcessImage extends React.Component {
 
   render() {
     const videoConstraints = {
-      width: 720,
-      height: 1280,
       facingMode: "user"
     };
 
@@ -38,23 +37,23 @@ class ProcessImage extends React.Component {
           screenshotFormat="image/jpeg"
           videoConstraints={videoConstraints}
         />
-        <p><button onClick={this.capture}>Take Picture</button></p>
+        <br/>
+        <br/>
+        <p><button id='pictureButton' className='Button' onClick={this.capture}>TAKE PICTURE</button></p>
         {!this.state.resultsHidden && <img src={this.state.imgsrc} />}
       </div>
     );
   }
   getOverlay = (original) => {
-    // Call FaaS here
 
     var base64result = original.split(',')[1];
 
     // Set up URI
     const url = process.env.REACT_APP_OVERLAY_URL
-    //const url = "http://localhost:8080/overlayImage"
 
+    // Call FaaS here
     try {
       const nodefetch = require('node-fetch')
-//      fetch(url, {
         nodefetch(url, {
           timeout: 10000,
           method: 'post',
@@ -65,7 +64,7 @@ class ProcessImage extends React.Component {
         body: JSON.stringify({
           imageData: base64result,
           imageType: 'jpg',
-          greeting: 'Hello from Coderland!',
+          greeting: 'The Compile Driver!',
           dateFormatString: 'MMMM d, yyyy',
           language: 'en',
           location: 'US'
@@ -76,6 +75,7 @@ class ProcessImage extends React.Component {
           this.setState({
             imgsrc: "data:image/jpeg;base64," + responseJson.imageData
           })
+          document.getElementById("pictureButton").disabled=false;
         })
       }
     catch (error) {

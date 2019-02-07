@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Overpass;
 }
 
 .App-logo {
@@ -20,6 +21,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Instructions {
+  font-size: small;
+}
+
+.Button {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: small;
+  width: 150px;
+  height: 40px;
+}
+
+.Picture {
+  border-color: rgb(214, 209, 209);
+  border-width: 10px;
 }
 
 @keyframes App-logo-spin {

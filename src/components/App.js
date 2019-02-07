@@ -17,12 +17,15 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>CompileDriver Photo Booth</h1>
+          <h1>Compile Driver Photo Booth</h1>
+          <br/>
+          <p className="Instructions">
+            Click the button below to take your picture.</p>
           <p>
-            Click the "Take Picture" button when ready...
-          <div className="App">
-            <ProcessImage />
-          </div>
+          <br/>
+            <div className="App">
+              <ProcessImage />
+            </div>
           </p>
         </header>
       </div>
