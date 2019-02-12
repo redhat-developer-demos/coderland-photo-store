@@ -49,13 +49,13 @@ class ProcessImage extends React.Component {
     var base64result = original.split(',')[1];
 
     // Set up URI
-    const url = process.env.REACT_APP_OVERLAY_URL
+    const url = (process.env.REACT_APP_OVERLAY_URL || "http://localhost:8080/overlayImage")
 
     // Call FaaS here
     try {
       const nodefetch = require('node-fetch')
         nodefetch(url, {
-          timeout: 10000,
+          timeout: 10001,
           method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ class ProcessImage extends React.Component {
         body: JSON.stringify({
           imageData: base64result,
           imageType: 'jpg',
-          greeting: process.env.REACT_APP_OVERLAY_MESSAGE,
+          greeting: (process.env.REACT_APP_OVERLAY_MESSAGE || "Hello from Coderland!"),
           dateFormatString: 'MMMM d, yyyy',
           language: 'en',
           location: 'US'
