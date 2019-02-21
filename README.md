@@ -23,23 +23,34 @@ There are options for running this program:
 
 ## IMPORTANT LINKS
 
-:notebook: [Knative Tutorial](https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial/dev/index.html)
+:notebook: [Knative Tutorial Docs](https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial/dev/index.html)
 
-:gift: [GitHub repo - Image overlay](https://github.com/redhat-developer-demos/image-overlay)
+:gift: [Knative Tutorial repo](https://bit.ly/knative-tutorial)
 
-:gift: [GitHub repo - Photo store](https://github.com/redhat-developer-demos/coderland-photo-store)
+### Part 1: Introduction to Serverless with Knative
 
-:gift: [GitHub repo - Knative proxy](https://github.com/redhat-developer-demos/knative-proxy)
+:page_facing_up: [ARTICLE: Part 1: Introduction to Serverless with Knative](https://developers.redhat.com/coderland/serverless/serverless-knative-intro/)
 
-:package: [Docker image](https://cloud.docker.com/repository/docker/dougtidwell/imageoverlay)
+:clapper: [VIDEO: Part 1: Introduction to Serverless with Knative](https://youtu.be/R8PGrhfVWTc)
 
-:clapper: [VIDEO: Serverless Computing Tutorial - Introduction (Part 1)](https://youtu.be/R8PGrhfVWTc)
+:gift: [REPO: Image overlay](https://github.com/redhat-developer-demos/image-overlay)
 
-:clapper: [VIDEO: Serverless Computing Tutorial - The Service (Part 2)](https://youtu.be/M_Xse7vjkvE)
+### Part 2: Building a Serverless Service
 
-:clapper: [VIDEO: Serverless Computing Tutorial - Deploying to Knative (Part 3)](https://youtu.be/AR4fqwFLn9I)
+:page_facing_up:[ARTICLE: Part 2: Building a Serverless Service](https://developers.redhat.com/coderland/serverless/building-a-serverless-service/)
 
+:clapper: [VIDEO: Part 2: Building a Serverless Service](https://youtu.be/M_Xse7vjkvE)
+
+:gift: [REPO: Photo store](https://github.com/redhat-developer-demos/coderland-photo-store)
+
+### Part 3: Deploying a Serverless Service to Knative
+
+:page_facing_up:[ARTICLE: Part 3: Deploying a Serverless Service to Knative](https://developers.redhat.com/coderland/serverless/deploying-serverless-knative/)
+
+:clapper: [VIDEO: Part 3: Deploying a Serverless Service to Knative](https://youtu.be/AR4fqwFLn9I)
+
+:gift: [REPO: Knative proxy](https://github.com/redhat-developer-demos/knative-proxy)
 
 ***
 
-Coderland :roller_coaster::rocket::ferris_wheel: is a place for learning, brought to you by the [Red Hat Developer](https://developers.redhat.com) program.
+Coderland :roller_coaster::rocket::ferris_wheel: is a place for learning. Developer Training and Red Hat Software: [Red Hat Developer](https://developers.redhat.com).
