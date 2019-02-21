@@ -1,10 +1,10 @@
 # Coderland Photo Store
 
-This is a React.js application that is part of an interactive Knative and serverless tutorial called the [Compile Driver](https://developers.redhat.com/compile-driver/), a ride at an imaginary theme park called Coderland. This application uses your computer camera to allow you to take a snapshot. The snapshot is then sent to a service that overlays the photo, and the result is sent back to this application and displayed.
+This is a React.js application that is part of an interactive Knative and serverless tutorial called the [Compile Driver](https://developers.redhat.com/coderland/serverless/), a ride at an imaginary theme park called Coderland. This application uses your computer camera to allow you to take a snapshot. The snapshot is then sent to a service that overlays the photo, and the result is sent back to this application and displayed.
 
 To run this demo, you'll need to point it to a service that accepts a JPEG picture as a base64 string in a JSON document and returns a base64 string (for the updated image) in a JSON document.
 
-coderland-overlay-image is the service that is used with this application. It is run as an OpenWhisk Web Action in OpenShift.
+image-overlay is the service that is used with this application. It is run as a Knative service in OpenShift.
 
 ## ENVIRONMENT VARIABLES  
 * You must set the REACT_APP_OVERLAY_URL environment variable to point to the service that does the image overlay.  
